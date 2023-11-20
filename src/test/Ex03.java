@@ -17,6 +17,13 @@ public class Ex03 {
         System.out.println("*****");
         System.out.println("*****");
         System.out.println("*****");
+        // 아니면
+        for (Integer a= 0; a<5; a= a + 1){
+            for (Integer b=0; b<5; b= b +1){
+                System.out.printf("*");
+            }
+            System.out.println();
+        }
 
 
         // 2. 다음과 같이 삼각형을 출력하는 코드 작성
@@ -34,6 +41,15 @@ public class Ex03 {
         System.out.println("***");
         System.out.println("****");
         System.out.println("*****");
+
+        //아니면
+
+        for (Integer a= 0; a<5; a= a + 1) {
+            for (Integer b = -1; b < a; b = b + 1) {
+                System.out.printf("*");
+            }
+            System.out.println();
+        }
 
         // 3. 다음과 같이 삼각형을 출력하는 코드 작성
         /*
