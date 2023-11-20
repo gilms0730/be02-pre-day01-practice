@@ -65,9 +65,9 @@ public class Ex03 {
         int n=5;
         for (int g = 0; g < n; g = g + 1){
             for (int m = 0; m < n-g-1; m = m + 1)
-            {System.out.print(" ");}
+            {System.out.printf(" ");}
             for (int s = 0; s < 2*g+1; s = s + 1)
-            {System.out.print("*");}
+            {System.out.printf("*");}
             System.out.println();
         }
 
