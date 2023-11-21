@@ -80,7 +80,7 @@ public class Ex03 {
             for (Integer p=0;p<3;p=p+1){
                 System.out.printf("w");}
             System.out.println();}
-        System.out.println("ㅗㅗㅗㅗㅗㅗ");
+        System.out.println("ㅛㅛㅛㅛㅛㅛ");
         System.out.println("MARRY CHRISMAS");
     }
 }
