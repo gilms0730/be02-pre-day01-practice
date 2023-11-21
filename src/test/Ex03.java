@@ -61,15 +61,26 @@ public class Ex03 {
          **********
          ----------
          *///공백이 414
+        System.out.println(" ");
+        System.out.println("               ◐");
+        System.out.println(" ");
+        System.out.println("★~~★~~~★ ");
+        System.out.println("~~★~~~★~~ ");
 
-        int n=5;
-        for (int g = 0; g < n; g = g + 1){
-            for (int m = 0; m < n-g-1; m = m + 1)
-            {System.out.printf(" ");}
-            for (int s = 0; s < 2*g+1; s = s + 1)
-            {System.out.printf("*");}
-            System.out.println();
-        }
-
+        System.out.println("    ★");
+        for (Integer i=0;i<5;i=i+1){
+            for (Integer j=0;j<5-i-1;j=j+1){
+                System.out.printf(" ");}
+            for (Integer p=0;p<2*i+1;p=p+1){
+                System.out.printf("A");}
+            System.out.println();}
+        for (Integer i=0;i<3;i=i+1){
+            for (Integer j=0;j<3;j=j+1){
+                System.out.printf(" ");}
+            for (Integer p=0;p<3;p=p+1){
+                System.out.printf("w");}
+            System.out.println();}
+        System.out.println("ㅗㅗㅗㅗㅗㅗ");
+        System.out.println("MARRY CHRISMAS");
     }
 }
