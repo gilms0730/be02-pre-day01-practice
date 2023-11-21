@@ -10,8 +10,12 @@ public class Ex02 {
         // 다음 코드를 6번 반복
         //     0부터 9까지 숫자 중 랜덤한 숫자를 하나 생성해서 저장
         //     저장한 숫자를 출력
-        for(int i=0;i<6;i=i+1){Integer num = (int)(Math.random()*9);
-            System.out.println(num);}
+        int [] lotto = new int [6];
+        for(int i=0;i<6;i=i+1) {
+            lotto[i] = (int) (Math.random() * 9);
+        }
+        System.out.println("인생 역전 로또 당첨번호는!!  "+"★ "+lotto[0]+" "+lotto[1]+" "+lotto[2]+" "+
+                lotto[3]+" "+lotto[4]+" "+lotto[5]+" ★"+"  축하합니다!!");
     }
 }
 
