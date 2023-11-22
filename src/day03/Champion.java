@@ -4,6 +4,7 @@ public class Champion {
     Integer damage;
     Integer range;
     Integer healthPoint;
+    Integer maxHealth;
     Integer defense;
     Integer level;
     Integer xp;
@@ -34,9 +35,17 @@ public class Champion {
     //죽음
     void die (){
         this.recall();
-        healthPoint=500;
+        healthPoint=maxHealth;
         System.out.println("챔피언이 죽었습니다.");
         System.out.println("챔피언이 부활합니다.");
+    }
+    //크리티컬 공격
+    Integer attacked (Integer damage, Integer num){
+        this.healthPoint = this.healthPoint - damage * num;
+        if(healthPoint<0){
+            this.die();
+        }
+        return healthPoint;
     }
     //공격
     Integer attacked (Integer damage){
@@ -46,8 +55,21 @@ public class Champion {
         }
         return healthPoint;
     }
-    void attackTo(Champion target) {
-        target.attacked(this.damage);
+    void attackTo(Champion target){
+        //target.attacked(this.damage);
+        Integer random = (int)(Math.random()*100+1);
+        if (random>=90){
+            target.attacked(this.damage,3);
+            System.out.println("3배 크리티컬!! 데미지:" + this.damage * 3);
+        }
+        else if (random>=80&&random<90){
+            target.attacked(this.damage,2);
+            System.out.println("2배 크리티컬!! 데미지: "+ this.damage * 2);
+        }
+        else if (random<80){
+            target.attacked(this.damage);
+            System.out.println("데미지: "+this.damage);
+        }
     }
 
     //레벨업
@@ -55,7 +77,7 @@ public class Champion {
         level= level + 1;
         damage= damage * (110/100);
         defense= defense * (105/100);
-        healthPoint= healthPoint * (120/100);
+        healthPoint= maxHealth * (120/100);
         return level;
     }
     //경험치

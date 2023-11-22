@@ -10,6 +10,7 @@ public class ingame {
         jinx.defense = 50;
         jinx.xp = 0;
         jinx.healthPoint=500;
+        jinx.maxHealth=500;
         jinx.x=0;
         jinx.y=0;
         jinx.itemList= new String[6];
@@ -26,6 +27,7 @@ public class ingame {
         darius.defense = 60;
         darius.xp = 0;
         darius.healthPoint=600;
+        darius.maxHealth=600;
         darius.x=0;
         darius.y=0;
         darius.itemList= new String[6];
@@ -35,26 +37,24 @@ public class ingame {
 
         //다리우스가 징크스를 공격한다
         //현재 징크스의 체력을 출력
-        jinx.healthPoint = jinx.attacked(darius.damage);
-        System.out.println("징크스의 현재 체력 : "+jinx.healthPoint);
-        darius.attackTo(jinx);
-        System.out.println("징크스의 현재 체력 : "+jinx.healthPoint);
-        darius.attackTo(jinx);
-        System.out.println("징크스의 현재 체력 : "+jinx.healthPoint);
-        darius.attackTo(jinx);
-        System.out.println("징크스의 현재 체력 : "+jinx.healthPoint);
-        darius.attackTo(jinx);
-        System.out.println("징크스의 현재 체력 : "+jinx.healthPoint);
-        darius.attackTo(jinx);
-        System.out.println("징크스의 현재 체력 : "+jinx.healthPoint);
-        darius.attackTo(jinx);
-        System.out.println("징크스의 현재 체력 : "+jinx.healthPoint);
-        darius.attackTo(jinx);
-        System.out.println("징크스의 현재 체력 : "+jinx.healthPoint);
-        darius.attackTo(jinx);
-        System.out.println("징크스의 현재 체력 : "+jinx.healthPoint);
-        darius.attackTo(jinx);
-        System.out.println("징크스의 현재 체력 : "+jinx.healthPoint);
+        jinx.attackTo(darius);
+        System.out.println("다리우스의 남은 체력 : "+darius.healthPoint+"/"+darius.maxHealth);
+        jinx.attackTo(darius);
+        System.out.println("다리우스의 남은 체력 : "+darius.healthPoint+"/"+darius.maxHealth);
+        jinx.attackTo(darius);
+        System.out.println("다리우스의 남은 체력 : "+darius.healthPoint+"/"+darius.maxHealth);
+        jinx.attackTo(darius);
+        System.out.println("다리우스의 남은 체력 : "+darius.healthPoint+"/"+darius.maxHealth);
+        jinx.attackTo(darius);
+        System.out.println("다리우스의 남은 체력 : "+darius.healthPoint+"/"+darius.maxHealth);
+        jinx.attackTo(darius);
+        System.out.println("다리우스의 남은 체력 : "+darius.healthPoint+"/"+darius.maxHealth);
+        jinx.attackTo(darius);
+        System.out.println("다리우스의 남은 체력 : "+darius.healthPoint+"/"+darius.maxHealth);
+
+
+
+
 
 
 
